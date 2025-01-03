@@ -43,7 +43,7 @@ void setup1(){
 
   for (int x=0; x<8; x++) {
     for (int y=0; y<16; y++) {
-      matrix_buffer[x][y] = x==(y%8)? 0x5050: 0x0000;
+      matrix_buffer[x][y] = 0x0000;
     }
   }
 }
@@ -70,7 +70,7 @@ void loop() {
     digitalWrite(PIN_STROBE, LOW); //STLOBE HIGH
     delayMicroseconds(1);
 
-    delayMicroseconds(200);
+    delayMicroseconds(100);
   }
 }
 
